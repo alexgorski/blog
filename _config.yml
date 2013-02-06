@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://alexgorski.github.com/blog
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://alexgorski.github.com/blog/
+title: Alex Gorski's Blog
+subtitle: A blog about learning Ruby.
+author: Alex Gorski
 simple_search: http://google.com/search
 description:
 
