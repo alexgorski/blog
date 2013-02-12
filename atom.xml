@@ -4,7 +4,7 @@
   <title><![CDATA[Alex Gorski's Blog]]></title>
   <link href="http://alexgorski.github.com/blog//atom.xml" rel="self"/>
   <link href="http://alexgorski.github.com/blog//"/>
-  <updated>2013-02-06T10:40:48-05:00</updated>
+  <updated>2013-02-12T09:37:03-05:00</updated>
   <id>http://alexgorski.github.com/blog//</id>
   <author>
     <name><![CDATA[Alex Gorski]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[5 Reasons I'm Learning Ruby]]></title>
+    <link href="http://alexgorski.github.com/blog//blog/2013/02/11/5-reasons-im-learning-ruby/"/>
+    <updated>2013-02-11T23:59:00-05:00</updated>
+    <id>http://alexgorski.github.com/blog//blog/2013/02/11/5-reasons-im-learning-ruby</id>
+    <content type="html"><![CDATA[<p>1: The ability to create and express ideas.</p>
+
+<pre><code>I'd rather be a raker than a taker, regulator or investigator.
+</code></pre>
+
+<p>2: Objects are everywhere.</p>
+
+<pre><code>I like the idea of every value being an object.
+</code></pre>
+
+<p>3: Convexity and Optionality</p>
+
+<pre><code>Like creative writing, art and other forms of expression, coding has predicatable costs (time) but unpredicatble payoffs. Coders have more upside from randomness than downside.
+</code></pre>
+
+<p>4: Skills that are improveable and not employer dependent.</p>
+
+<pre><code>Many so called knowledge-workers get stuck in a box at their employer. The I want to build my own box.got
+</code></pre>
+
+<p>5: I enjoy learning.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First Post]]></title>
