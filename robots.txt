@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://alexgorski.github.com/blog//sitemap.xml 
