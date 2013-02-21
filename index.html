@@ -97,9 +97,9 @@
 
 <p>Real-time sports data feeds can be expensive, especially when there are very few options. For a project requiring fresh but not real-time statistics, I investigated applying the Nokogiri gem to ESPN. Lets see what that looks like:</p>
 
-<blockquote><p>game_id = 330510183
-page = Nokogiri::HTML(open(&#8220;http://espn.go.com/ncb/boxscore?id=#{game_id}&#8221;))
-headers = page.css(&#8220;div#my-players-table .colhead th&#8221;)
+<blockquote><p>game_id = 330510183<br/>
+page = Nokogiri::HTML(open(&#8220;http://espn.go.com/ncb/boxscore?id=#{game_id}&#8221;))<br/>
+headers = page.css(&#8220;div#my-players-table .colhead th&#8221;)<br/>
 player_rows = page.css(&#8220;div#my-players-table td&#8221;)</p></blockquote>
 
 <p>ESPN creates a gameid for each game which is appended to boxscore?id= as well as other pages related to that game such as recap?, playbyplay?, photos?, and conversation?. I haven&#8217;t discovered ESPN&#8217;s logic to generate gameid, perhaps the subject of a later post.</p>
