@@ -99,26 +99,23 @@
 
 <p>I became familiar with the on() function to insert random numbers for each question as user entered the answer input field.</p>
 
-<p>$(this).on(&#8220;focus&#8221;, &#8220;input&#8221;, function(){</p>
-
-<pre><code>x = (Math.random()*gear_level*10)+1;
+<pre><code>$(this).on("focus", "input", function(){
+x = (Math.random()*gear_level*10)+1;
 y = (Math.random()*gear_level*10)+1;
 x = parseInt(x);
 y = parseInt(y);
 $(this).parent('td').children("span:first").replaceWith("&lt;span&gt;"+x+"&lt;/span&gt;");
 $(this).parent('td').children("span:last").replaceWith("&lt;span&gt;"+y+"&lt;/span&gt;");
 $(this).parent('td').children("span:nth-child(2)").replaceWith("&lt;span&gt;"+operator_level+"&lt;/span&gt;";
+}
+)
+;
 </code></pre>
-
-<p>  }
- )
-;</p>
 
 <p>The second part fires when a user enters an answer. The change() function evaluates whether the user&#8217;s input in the answer field matches the correct answer. If it is correct, the total_right variable is appended with the correct answer, if not it goes into total_wrong.</p>
 
-<p>$(&#8220;input&#8221;).change(function(){</p>
-
-<pre><code>z = parseInt($(this).val());
+<pre><code>$("input").change(function(){
+z = parseInt($(this).val());
 if (z === (x + y))
   {
   $(this).css("color", "green");
@@ -131,7 +128,7 @@ else
   wrong.push(z);
   $("#total_wrong").replaceWith("&lt;span id='total_wrong'&gt;"+wrong.length+"&lt;/span&gt;");
   }
-});
+  });
 </code></pre>
 </div>
   
