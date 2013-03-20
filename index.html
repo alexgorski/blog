@@ -9,7 +9,7 @@
   <meta name="author" content="Alex Gorski">
 
   
-  <meta name="description" content="When we were first introduced to the Nokogiri gem for scraping the webz it seemed like every classmate&#8217;s mental wheels started turning at the &hellip;">
+  <meta name="description" content="https://github.com/alexgorski/practice-calculator Ever since Jon Grover spent a week working with us on various Javascript concepts and exercises, I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,81 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2013/03/19/focusing-on-math/">Focusing on Math</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-19T23:32:00-04:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>https://github.com/alexgorski/practice-calculator</p>
+
+<p>Ever since Jon Grover spent a week working with us on various Javascript concepts and exercises, I have been appending his calculator files. The end goal is for the user to select a level and operator and have the application create questions. The user&#8217;s answers are scored in browser and the total correct and wrong are tracked.</p>
+
+<p>I became familiar with the on() function to insert random numbers for each question as user entered the answer input field.</p>
+
+<p>$(this).on(&#8220;focus&#8221;, &#8220;input&#8221;, function(){</p>
+
+<pre><code>x = (Math.random()*gear_level*10)+1;
+y = (Math.random()*gear_level*10)+1;
+x = parseInt(x);
+y = parseInt(y);
+$(this).parent('td').children("span:first").replaceWith("&lt;span&gt;"+x+"&lt;/span&gt;");
+$(this).parent('td').children("span:last").replaceWith("&lt;span&gt;"+y+"&lt;/span&gt;");
+$(this).parent('td').children("span:nth-child(2)").replaceWith("&lt;span&gt;"+operator_level+"&lt;/span&gt;";
+</code></pre>
+
+<p>  }
+ )
+;</p>
+
+<p>The second part fires when a user enters an answer. The change() function evaluates whether the user&#8217;s input in the answer field matches the correct answer. If it is correct, the total_right variable is appended with the correct answer, if not it goes into total_wrong.</p>
+
+<p>$(&#8220;input&#8221;).change(function(){</p>
+
+<pre><code>z = parseInt($(this).val());
+if (z === (x + y))
+  {
+  $(this).css("color", "green");
+  right.push(z);
+  $("#total_right").replaceWith("&lt;span id='total_right'&gt;"+right.length+"&lt;/span&gt;");
+  }
+else
+  {
+  $(this).css("color","red");
+  wrong.push(z);
+  $("#total_wrong").replaceWith("&lt;span id='total_wrong'&gt;"+wrong.length+"&lt;/span&gt;");
+  }
+});
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -227,6 +302,10 @@ player_rows = page.css(&#8220;div#my-players-table td&#8221;)</p></blockquote>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2013/03/19/focusing-on-math/">focusing on math</a>
+      </li>
     
       <li class="post">
         <a href="/blog/blog/2013/02/21/sports-scrape/">Sports Scrape</a>
