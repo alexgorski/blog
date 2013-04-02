@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>focusing on math - Alex Gorski's Blog</title>
+  <title>JQuery and Your Controllers - Alex Gorski's Blog</title>
   <meta name="author" content="Alex Gorski">
 
   
-  <meta name="description" content="https://github.com/alexgorski/practice-calculator Ever since Jon Grover spent a week working with us on various Javascript concepts and exercises, I &hellip;">
+  <meta name="description" content="While building the Flatiron School Hire application we hit a stumbling block with integrating the twitter-bootstrap awesome theme. Our navigation &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://alexgorski.github.com/blog//blog/2013/03/19/focusing-on-math/">
+  <link rel="canonical" href="http://alexgorski.github.com/blog//blog/2013/04/01/jquery-and-your-controllers/">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/blog/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Focusing on Math</h1>
+      <h1 class="entry-title">JQuery and Your Controllers</h1>
     
     
       <p class="meta">
@@ -83,50 +83,28 @@
   
 
 
-<time datetime="2013-03-19T23:32:00-04:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
+<time datetime="2013-04-01T23:12:00-04:00" pubdate data-updated="true">Apr 1<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>https://github.com/alexgorski/practice-calculator</p>
+<div class="entry-content"><p>While building the Flatiron School Hire application we hit a stumbling block with integrating the twitter-bootstrap awesome theme. Our navigation tabs and navigation bar default class was active for our root Students#Index. When navigating to the other views, the themed Javascript did not remove the active class from the prior view and apply it to the current view. Our solution below:</p>
 
-<p>Ever since Jon Grover spent a week working with us on various Javascript concepts and exercises, I have been appending his calculator files. The end goal is for the user to select a level and operator and have the application create questions. The user&#8217;s answers are scored in browser and the total correct and wrong are tracked.</p>
-
-<p>I became familiar with the on() function to insert random numbers for each question as user entered the answer input field.</p>
-
-<pre><code>$(this).on("focus", "input", function(){
-x = (Math.random()*gear_level*10)+1;
-y = (Math.random()*gear_level*10)+1;
-x = parseInt(x);
-y = parseInt(y);
-$(this).parent('td').children("span:first").replaceWith("&lt;span&gt;"+x+"&lt;/span&gt;");
-$(this).parent('td').children("span:last").replaceWith("&lt;span&gt;"+y+"&lt;/span&gt;");
-$(this).parent('td').children("span:nth-child(2)").replaceWith("&lt;span&gt;"+operator_level+"&lt;/span&gt;";
-}
-)
-;
+<pre><code>&lt;script type='text/javascript'&gt;
+$(".nav a[href='/&lt;%=params[:controller]%&gt;']").parent('li').removeClass('active');
+$(".nav a[href='/&lt;%=params[:controller]%&gt;']").parent('li').addClass("active");
+&lt;/script&gt;
 </code></pre>
 
-<p>The second part fires when a user enters an answer. The change() function evaluates whether the user&#8217;s input in the answer field matches the correct answer. If it is correct, the total_right variable is appended with the correct answer, if not it goes into total_wrong.</p>
+<p>Things learned:</p>
 
-<pre><code>$("input").change(function(){
-z = parseInt($(this).val());
-if (z === (x + y))
-  {
-  $(this).css("color", "green");
-  right.push(z);
-  $("#total_right").replaceWith("&lt;span id='total_right'&gt;"+right.length+"&lt;/span&gt;");
-  }
-else
-  {
-  $(this).css("color","red");
-  wrong.push(z);
-  $("#total_wrong").replaceWith("&lt;span id='total_wrong'&gt;"+wrong.length+"&lt;/span&gt;");
-  }
-  });
-</code></pre>
+<p>1) If you name your navigations tags and controllers appropriately, you can use params[:controller] to make JQuery simple.</p>
+
+<p>2) ERB renders the anchor tags if the rails link_to method is used, which makes playing with the browser console a go-to way to ensure that the your JQuery selectors are snatching the elements you expect.</p>
+
+<p>3) The javscript click function might seem like a good place to start, but each time the user navigates to a new page there may be issues with reloading the page. This solution seems pretty nice for the time being.</p>
 </div>
 
 
@@ -149,7 +127,7 @@ else
   
 
 
-<time datetime="2013-03-19T23:32:00-04:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
+<time datetime="2013-04-01T23:12:00-04:00" pubdate data-updated="true">Apr 1<span>st</span>, 2013</time>
       
 
 
@@ -157,7 +135,7 @@ else
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alexgorski.github.com/blog//blog/2013/03/19/focusing-on-math/" data-via="" data-counturl="http://alexgorski.github.com/blog//blog/2013/03/19/focusing-on-math/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alexgorski.github.com/blog//blog/2013/04/01/jquery-and-your-controllers/" data-via="" data-counturl="http://alexgorski.github.com/blog//blog/2013/04/01/jquery-and-your-controllers/" >Tweet</a>
   
   
   
@@ -166,10 +144,8 @@ else
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/blog/2013/02/21/sports-scrape/" title="Previous Post: Sports Scrape">&laquo; Sports Scrape</a>
+        <a class="basic-alignment left" href="/blog/blog/2013/03/19/focusing-on-math/" title="Previous Post: focusing on math">&laquo; focusing on math</a>
       
-      
-        <a class="basic-alignment right" href="/blog/blog/2013/04/01/jquery-and-your-controllers/" title="Next Post: JQuery and Your Controllers">JQuery and Your Controllers &raquo;</a>
       
     </p>
   </footer>

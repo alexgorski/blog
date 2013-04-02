@@ -4,7 +4,7 @@
   <title><![CDATA[Alex Gorski's Blog]]></title>
   <link href="http://alexgorski.github.com/blog//atom.xml" rel="self"/>
   <link href="http://alexgorski.github.com/blog//"/>
-  <updated>2013-03-20T10:05:29-04:00</updated>
+  <updated>2013-04-01T23:30:30-04:00</updated>
   <id>http://alexgorski.github.com/blog//</id>
   <author>
     <name><![CDATA[Alex Gorski]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[JQuery and Your Controllers]]></title>
+    <link href="http://alexgorski.github.com/blog//blog/2013/04/01/jquery-and-your-controllers/"/>
+    <updated>2013-04-01T23:12:00-04:00</updated>
+    <id>http://alexgorski.github.com/blog//blog/2013/04/01/jquery-and-your-controllers</id>
+    <content type="html"><![CDATA[<p>While building the Flatiron School Hire application we hit a stumbling block with integrating the twitter-bootstrap awesome theme. Our navigation tabs and navigation bar default class was active for our root Students#Index. When navigating to the other views, the themed Javascript did not remove the active class from the prior view and apply it to the current view. Our solution below:</p>
+
+<pre><code>&lt;script type='text/javascript'&gt;
+$(".nav a[href='/&lt;%=params[:controller]%&gt;']").parent('li').removeClass('active');
+$(".nav a[href='/&lt;%=params[:controller]%&gt;']").parent('li').addClass("active");
+&lt;/script&gt;
+</code></pre>
+
+<p>Things learned:</p>
+
+<p>1) If you name your navigations tags and controllers appropriately, you can use params[:controller] to make JQuery simple.</p>
+
+<p>2) ERB renders the anchor tags if the rails link_to method is used, which makes playing with the browser console a go-to way to ensure that the your JQuery selectors are snatching the elements you expect.</p>
+
+<p>3) The javscript click function might seem like a good place to start, but each time the user navigates to a new page there may be issues with reloading the page. This solution seems pretty nice for the time being.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[focusing on math]]></title>
