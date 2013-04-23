@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>5 Reasons I'm Learning Ruby - Alex Gorski's Blog</title>
+  <title>Array vs Linked List - Alex Gorski's Blog</title>
   <meta name="author" content="Alex Gorski">
 
   
-  <meta name="description" content="1: The ability to create and express ideas. I&#8217;d rather be a raker than a taker, regulator or investigator. 2: Objects are everywhere. I like &hellip;">
+  <meta name="description" content="So what is this &#8216;linked list&#8217; that I sort of remember from some class? And how does it compare to an array? A linked list is a data &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://alexgorski.github.com/blog//blog/2013/02/11/5-reasons-im-learning-ruby/">
+  <link rel="canonical" href="http://alexgorski.github.com/blog//blog/2013/04/22/array-vs-linked-list/">
   <link href="/blog/favicon.png" rel="icon">
   <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/blog/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">5 Reasons I'm Learning Ruby</h1>
+      <h1 class="entry-title">Array vs Linked List</h1>
     
     
       <p class="meta">
@@ -83,30 +83,18 @@
   
 
 
-<time datetime="2013-02-11T23:59:00-05:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time>
+<time datetime="2013-04-22T12:32:00-04:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>1: The ability to create and express ideas.</h3>
+<div class="entry-content"><p>So what is this &#8216;linked list&#8217; that I sort of remember from some class? And how does it compare to an array?</p>
 
-<p>I&#8217;d rather be a raker than a taker, regulator or investigator.</p>
+<p>A linked list is a data structure that contains nodes with data and a link (or two) to the next (or previous) piece of data. Since each node points to the address of other nodes, the data structure does not need a contiguous memory store. Therefore, it is fast to insert or delete data into the linked list.</p>
 
-<h3>2: Objects are everywhere.</h3>
-
-<p>I like the idea of every value being an object.</p>
-
-<h3>3: Convexity and Optionality</h3>
-
-<p>Like creative writing, art, music and other forms of expression, coding has predictable costs (time) but unpredictable payoffs (create something world changing). A coder&#8217;s output follows a convex function.</p>
-
-<h3>4: Skills that are improveable and not employer dependent.</h3>
-
-<p>Most knowledge-workers are constrained by their employer&#8217;s environment which constrains their output. Coding is a skill that is transferable and does not require an employer at all.</p>
-
-<h3>5: I enjoy learning.</h3>
+<p>In comparison, an array is a data structure that has a fixed memory store. In order to add or delete data with an array, the entire structure must be copied with each modification. As the array becomes larger it is more expensive to manipulate. While an array is more expensive to manipulate because of its fixed memory, it can be read quickly because the entire structure is at the same address, whereas the linked list is read slowly because there are multiple addresses to traverse.</p>
 </div>
 
 
@@ -129,7 +117,7 @@
   
 
 
-<time datetime="2013-02-11T23:59:00-05:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time>
+<time datetime="2013-04-22T12:32:00-04:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2013</time>
       
 
 
@@ -137,7 +125,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alexgorski.github.com/blog//blog/2013/02/11/5-reasons-im-learning-ruby/" data-via="" data-counturl="http://alexgorski.github.com/blog//blog/2013/02/11/5-reasons-im-learning-ruby/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alexgorski.github.com/blog//blog/2013/04/22/array-vs-linked-list/" data-via="" data-counturl="http://alexgorski.github.com/blog//blog/2013/04/22/array-vs-linked-list/" >Tweet</a>
   
   
   
@@ -146,10 +134,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/blog/2013/02/05/first-post/" title="Previous Post: First Post">&laquo; First Post</a>
+        <a class="basic-alignment left" href="/blog/blog/2013/04/01/jquery-and-your-controllers/" title="Previous Post: JQuery and Your Controllers">&laquo; JQuery and Your Controllers</a>
       
-      
-        <a class="basic-alignment right" href="/blog/blog/2013/02/21/sports-scrape/" title="Next Post: Sports Scrape">Sports Scrape &raquo;</a>
       
     </p>
   </footer>

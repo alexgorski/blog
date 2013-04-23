@@ -4,7 +4,7 @@
   <title><![CDATA[Alex Gorski's Blog]]></title>
   <link href="http://alexgorski.github.com/blog//atom.xml" rel="self"/>
   <link href="http://alexgorski.github.com/blog//"/>
-  <updated>2013-04-01T23:30:30-04:00</updated>
+  <updated>2013-04-23T10:27:20-04:00</updated>
   <id>http://alexgorski.github.com/blog//</id>
   <author>
     <name><![CDATA[Alex Gorski]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Array vs Linked List]]></title>
+    <link href="http://alexgorski.github.com/blog//blog/2013/04/22/array-vs-linked-list/"/>
+    <updated>2013-04-22T12:32:00-04:00</updated>
+    <id>http://alexgorski.github.com/blog//blog/2013/04/22/array-vs-linked-list</id>
+    <content type="html"><![CDATA[<p>So what is this &#8216;linked list&#8217; that I sort of remember from some class? And how does it compare to an array?</p>
+
+<p>A linked list is a data structure that contains nodes with data and a link (or two) to the next (or previous) piece of data. Since each node points to the address of other nodes, the data structure does not need a contiguous memory store. Therefore, it is fast to insert or delete data into the linked list.</p>
+
+<p>In comparison, an array is a data structure that has a fixed memory store. In order to add or delete data with an array, the entire structure must be copied with each modification. As the array becomes larger it is more expensive to manipulate. While an array is more expensive to manipulate because of its fixed memory, it can be read quickly because the entire structure is at the same address, whereas the linked list is read slowly because there are multiple addresses to traverse.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JQuery and Your Controllers]]></title>
