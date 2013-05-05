@@ -4,7 +4,7 @@
   <title><![CDATA[Alex Gorski's Blog]]></title>
   <link href="http://alexgorski.github.com/blog//atom.xml" rel="self"/>
   <link href="http://alexgorski.github.com/blog//"/>
-  <updated>2013-05-05T18:13:42-04:00</updated>
+  <updated>2013-05-05T18:15:18-04:00</updated>
   <id>http://alexgorski.github.com/blog//</id>
   <author>
     <name><![CDATA[Alex Gorski]]></name>
@@ -22,7 +22,8 @@
 
 <p>At some point I wanted to boot up console and play with my new class methods and quickly realized that I only had access to the published gem. To switch from the published gem to my development copy, I used the following:</p>
 
-<p>gem &#8216;sports_data_api&#8217;, :path => &#8220;/Users/your_path_here/sports_data_api&#8221;</p>
+<pre><code>gem 'sports_data_api', :path =&gt; "/Users/your_path_here/sports_data_api"
+</code></pre>
 
 <p>I rebooted console and now had access to my changes.</p>
 ]]></content>
